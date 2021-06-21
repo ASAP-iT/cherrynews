@@ -31,11 +31,18 @@
 </template>
 
 <script>
+import { mapActions, mapState, mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  computed: {
+    ...mapState([''])
+  },
+  methods: {
+    ...mapMutations(['setToken']),
+  },
 }
 </script>
 
