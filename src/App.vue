@@ -6,7 +6,13 @@
       <router-link to="/about">Account</router-link>
     </MDBNavbarNav>
   </MDBNavbar>
-  <router-view/>
+  <router-view class="content"/>
+  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+  </MDBFooter>
 </template>
 
 <script>
@@ -39,6 +45,10 @@ export default {
 </script>
 
 <style>
+.content {
+  margin-bottom: 100px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

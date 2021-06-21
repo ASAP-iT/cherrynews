@@ -252,7 +252,7 @@
 
 <script>
 import {
-  MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn,
+  MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBContainer,
   MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem
 } from "mdb-vue-ui-kit";
 
@@ -262,7 +262,7 @@ export default {
     MDBBtn,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
-    MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,
+    MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBContainer
   },
   methods: {
     register() {
