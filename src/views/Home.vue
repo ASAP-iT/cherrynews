@@ -85,7 +85,141 @@
         <MDBCardBody>
           <MDBCardTitle>Название статьи</MDBCardTitle>
           <MDBCardText>
-            Каткое описание статьи буквально в паasdf sadf asd asd fads f asdds asd f as f ds f asf  asd fsad fs d f f asdf asdf asd asdf ру строк чтобы можно было понять что ты будешь читать далее
+            Каткое описание статьи буквально в паasdf sadf asd asd fads f asdds asd f as f ds f asf  asd fsad fs d f
+            f asdf asdf asd asdf ру строк чтобы можно было понять
+            что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <div class="w-100"></div>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+          </MDBCardText>
+          <MDBBtn outline="primary">Читать далее</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+
+      <MDBCard class="col cell">
+        <MDBCardBody>
+          <MDBCardTitle>Название статьи</MDBCardTitle>
+          <MDBCardText>
+            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
           </MDBCardText>
           <MDBBtn outline="primary">Читать далее</MDBBtn>
         </MDBCardBody>

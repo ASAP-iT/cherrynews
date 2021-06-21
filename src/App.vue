@@ -4,29 +4,26 @@
     <MDBNavbarNav collapse="navbarExample01" class="mb-2 mb-lg-0">
       <router-link to="/">Posts</router-link> |
       <router-link to="/about">Account</router-link>
-<!--      <MDBNavbarItem to="#" active>-->
-<!--        Home-->
-<!--      </MDBNavbarItem>-->
-<!--      <MDBNavbarItem to="/account">-->
-<!--        Account-->
-<!--      </MDBNavbarItem>-->
-<!--      <MDBNavbarItem to="/about">-->
-<!--        About-->
-<!--      </MDBNavbarItem>-->
     </MDBNavbarNav>
   </MDBNavbar>
   <router-view/>
 </template>
 
 <script>
-import { MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
+import {
+  MDBContainer, MDBRow, MDBCol,
+  MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 
 export default {
   name: 'App',
   components: {
     MDBBtn,
     MDBSpinner,
-    MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem
+    MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBContainer, MDBRow, MDBCol,
   },
   methods: {
     register() {
