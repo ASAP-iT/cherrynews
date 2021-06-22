@@ -8,16 +8,24 @@
     </MDBNavbarNav>
   </MDBNavbar>
   <router-view/>
+<!--  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start">-->
+<!--    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
+<!--      © 2020 Copyright:-->
+<!--      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>-->
+<!--    </div>-->
+<!--  </MDBFooter>-->
 </template>
 
 <script>
 import {
+  MDFooter,
   MDBContainer, MDBRow, MDBCol,
   MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 
 export default {
   name: 'App',
   components: {
+    MDFooter,
     MDBBtn,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
@@ -41,15 +49,11 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 #nav {

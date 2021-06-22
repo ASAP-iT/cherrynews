@@ -6,14 +6,15 @@
       <h1>Название статьи</h1>
       <h5 style="text-align: left; color: gray">Автор</h5>
 
-      <h6>
+      <p style="text-align: left;margin-top: 32px;margin-bottom: 32px">
         Какой-то текст статьи, которую вы прочтете и узнаете, что-то новое и полезное и ваша жизнь станет чуточку лучше.
         Вы начнете чувствовать прилив сил и знаний, и вам захочется двигаться, петь, плясать, веселиться и еще много,
         много, много чего.....
-      </h6>
-      <p style="text-align: left; color: gray">
-        Дата
       </p>
+
+      <h6 style="text-align: left; color: gray">
+        Дата
+      </h6>
     </MDBCardBody>
   </MDBCard>
 
