@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Deploy Prod") {
             when {
-                branch "master"
+                branch "main"
             }
             steps {
                 notifyEvents message: "#Cherry_Frontend ⬇️ Started Npm Installing...", token: '7yi9o1VBd3mz-JP2JhQOICo3Y5zgPHGk'
