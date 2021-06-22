@@ -8,15 +8,16 @@
     </MDBNavbarNav>
   </MDBNavbar>
   <router-view/>
-<!--  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start">-->
-<!--    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
-<!--      © 2020 Copyright:-->
-<!--      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>-->
-<!--    </div>-->
-<!--  </MDBFooter>-->
+  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start align-bottom">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+  </MDBFooter>
 </template>
 
 <script>
+
 import {
   MDFooter,
   MDBContainer, MDBRow, MDBCol,
@@ -48,12 +49,20 @@ export default {
 </script>
 
 <style>
+.main {
+  text-align: center;
+  margin-top: 32px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
 #app {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height: 100vh;
 }
 
 #nav {

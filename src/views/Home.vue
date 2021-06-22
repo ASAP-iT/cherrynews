@@ -1,5 +1,5 @@
 <template>
-  <div class="main" style="width: 100%;text-align: center;padding-top: 64px">
+  <div class="main">
     <h1>Cherry News</h1>
     <p class="note note-danger">
       <strong>Внимание:</strong> Статьи в этом разделе не проходят модерацию. Они были опубликованы другими пользователями нашего
