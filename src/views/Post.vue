@@ -3,7 +3,7 @@
     <h1>Название статьи</h1>
 
     <div class="wrapper">
-      <div class="row" style="padding-top: 32px;max-width: 1000px;margin-left: auto;margin-right: auto">
+      <div style="padding-top: 32px;max-width: 700px;margin: 0 auto">
         <MDBCard class="mb-3 custom" style="max-width: 1000px; display: table; margin: 10px auto;">
           <MDBCardImg top src="https://mdbootstrap.com/img/new/slides/041.jpg" alt="..."/>
           <MDBCardBody>
