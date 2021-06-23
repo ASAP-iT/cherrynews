@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h1>Login</h1>
+    <h1>Вход</h1>
     <div class="wrapper">
       <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0">
         <MDBCard class="profile-card" style="display: table; margin: 0 auto;">

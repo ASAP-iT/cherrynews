@@ -7,6 +7,7 @@
       <router-link to="/post">Post</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/register">Register</router-link> |
+      <router-link to="/create-post">Create Post</router-link> |
     </MDBNavbarNav>
   </MDBNavbar>
   <router-view/>

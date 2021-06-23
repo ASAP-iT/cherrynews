@@ -12,7 +12,7 @@
           <MDBCardText>
             Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
           </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
+          <MDBBtn outline="primary" @click.native="$router.push('/post')">Читать далее</MDBBtn>
         </MDBCardBody>
       </MDBCard>
 
