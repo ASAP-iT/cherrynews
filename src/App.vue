@@ -4,16 +4,18 @@
     <MDBNavbarNav collapse="navbarExample01" class="mb-2 mb-lg-0">
       <router-link to="/">Posts</router-link> |
       <router-link to="/about">Account</router-link> |
-      <router-link to="/post">Post</router-link>
+      <router-link to="/post">Post</router-link> |
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/register">Register</router-link> |
     </MDBNavbarNav>
   </MDBNavbar>
   <router-view/>
-  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start align-bottom">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-  </MDBFooter>
+<!--  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start align-bottom">-->
+<!--    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
+<!--      © 2021 Copyright:-->
+<!--      <a class="text-white" href="https://news.asap-it.tech/">asap-it.tech</a>-->
+<!--    </div>-->
+<!--  </MDBFooter>-->
 </template>
 
 <script>
@@ -36,14 +38,9 @@ export default {
     MDBContainer, MDBRow, MDBCol,
   },
   methods: {
-    register() {
-      this.isLoading = true
-    },
   },
   data() {
-    return {
-      isLoading: false
-    }
+    return {}
   }
 }
 </script>

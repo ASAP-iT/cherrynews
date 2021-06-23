@@ -74,14 +74,9 @@ export default {
     MDCol,
   },
   methods: {
-    register() {
-      this.isLoading = true
-    },
   },
   data() {
-    return {
-      isLoading: false
-    }
+    return {}
   }
 }
 </script>

@@ -12,7 +12,7 @@
           <h2>Hello, Roman</h2>
           <p style="color: gray">You're a basic user</p>
           <div class="form-outline form-item">
-            <input class="form-control active">
+            <input v-model="full_name" class="form-control active">
             <label class="form-label">Полное имя</label>
             <div class="form-notch">
               <div class="form-notch-leading" style="width: 9px"></div>
@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="form-outline form-item">
-            <input type="Email" class="form-control active">
+            <input v-model="email" type="Email" class="form-control active">
             <label class="form-label">Email</label>
             <div class="form-notch">
               <div class="form-notch-leading" style="width: 9px"></div>
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="form-outline form-item">
-            <input class="form-control active">
+            <input v-model="nickname" class="form-control active">
             <label class="form-label">Имя Пользователя</label>
             <div class="form-notch">
               <div class="form-notch-leading" style="width: 9px"></div>
@@ -38,7 +38,16 @@
               <div class="form-notch-trailing"></div>
             </div>
           </div>
-          <MDBBtn color="primary" size="lg" class="save">Сохранить</MDBBtn>
+          <div class="form-outline form-item">
+            <input v-model="password" class="form-control active">
+            <label class="form-label">Имя Пользователя</label>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px"></div>
+              <div class="form-notch-middle" style="width: 120px"></div>
+              <div class="form-notch-trailing"></div>
+            </div>
+          </div>
+          <MDBBtn color="primary" size="lg" class="save" @click="saveUser()">Сохранить</MDBBtn>
         </MDBCard>
       </div>
     </div>
@@ -46,10 +55,11 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 
 export default {
-  name: 'App',
+  name: 'About',
   components: {
     MDBBtn,
     MDBSpinner,
@@ -58,20 +68,38 @@ export default {
     MDCol,
   },
   methods: {
-    register() {
-      this.isLoading = true
+    saveUser() {
+
     },
+    registerUser() {
+      // const data = {
+      //   full_name: this.full_name,
+      //   email: this.email,
+      //   nickname: this.nickname,
+      //   password: this.password,
+      // }
+      // this.register(data)
+      //   .then((response) => {
+      //     console.log(response.data.body)
+      //   })
+      //   .finally(() => {
+      //     console.log("Finally")
+      //   })
+    },
+    ...mapActions(['save']),
   },
   data() {
     return {
-      isLoading: false
+      full_name: "",
+      email: "",
+      nickname: "",
+      password: ""
     }
   }
 }
 </script>
 
 <style>
-
 .form-item {
   margin-top: 24px;
   margin-bottom: 24px;

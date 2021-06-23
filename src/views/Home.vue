@@ -257,7 +257,7 @@ import {
 } from "mdb-vue-ui-kit";
 
 export default {
-  name: 'App',
+  name: 'Home',
   components: {
     MDBBtn,
     MDBSpinner,
