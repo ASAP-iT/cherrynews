@@ -1,14 +1,32 @@
 <template>
-  <MDBNavbar id="nav" expand="lg" light bg="white" container>
-    <MDBNavbarToggler target="#navbarExample01"></MDBNavbarToggler>
-    <MDBNavbarNav collapse="navbarExample01" class="mb-2 mb-lg-0">
-      <router-link to="/">Posts</router-link> |
-      <router-link to="/about">Account</router-link> |
-      <router-link to="/post">Post</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/register">Register</router-link> |
-      <router-link to="/create-post">Create Post</router-link> |
-    </MDBNavbarNav>
+  <MDBNavbar expand="lg" light bg="light" container>
+    <MDBNavbarBrand href="#">Brand</MDBNavbarBrand>
+    <MDBNavbarToggler
+        @click="collapse1 = !collapse1"
+        target="#navbarSupportedContent"
+    ></MDBNavbarToggler>
+    <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
+      <MDBNavbarNav class="mb-2 mb-lg-0">
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/">Home</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/about">Account</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/post">Post</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/login">Login</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/register">Register</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem class="nav-item" to="">
+          <router-link to="/create-post">Create</router-link>
+        </MDBNavbarItem>
+      </MDBNavbarNav>
+    </MDBCollapse>
   </MDBNavbar>
   <router-view/>
 <!--  <MDBFooter :text="['white', 'center', 'lg-start']" class="footer text-white text-center text-lg-start align-bottom">-->
@@ -23,30 +41,50 @@
 
 import {
   MDFooter,
-  MDBContainer, MDBRow, MDBCol,
-  MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBSpinner,
+  MDBNavbar,
+  MDBNavbarToggler,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBDropdown,
+  MDBDropdownToggle, MDBCollapse,
+  MDBDropdownMenu, MDBDropdownItem, MDBNavbarBrand
+} from "mdb-vue-ui-kit";
+import { ref } from 'vue';
 
 export default {
   name: 'App',
   components: {
     MDFooter,
-    MDBBtn,
+    MDBBtn, MDBNavbarBrand, MDBCollapse,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
     MDBContainer,
     MDBRow,
     MDBCol,
     MDBContainer, MDBRow, MDBCol,
+    MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
   },
   methods: {
   },
   data() {
-    return {}
+    return {
+      dropdown: ref(false),
+    }
   }
 }
 </script>
 
 <style>
+.nav-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .main {
   text-align: center;
   margin-top: 32px;
