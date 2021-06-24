@@ -5,6 +5,7 @@ import About from "../views/About.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import CreatePost from "../views/CreatePost.vue";
+import Administration from "@/views/Administration.vue";
 
 const routes = [
   {
@@ -46,7 +47,15 @@ const routes = [
     path: '/create-post',
     name: 'Create Post',
     component: CreatePost
-  }
+  },
+  {
+    path: '/administration',
+    name: 'Administration',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Administration
+  },
 ]
 
 const router = createRouter({

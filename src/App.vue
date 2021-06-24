@@ -22,6 +22,9 @@
         <MDBNavbarItem v-if="!this.isLoggedIn" class="nav-item" to="">
           <router-link to="/register"><b>Register</b></router-link>
         </MDBNavbarItem>
+        <MDBNavbarItem v-if="this.isLoggedIn" class="nav-item" to="">
+          <router-link to="/administration">Administration</router-link>
+        </MDBNavbarItem>
       </MDBNavbarNav>
     </MDBCollapse>
   </MDBNavbar>
