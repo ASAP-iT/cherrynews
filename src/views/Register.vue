@@ -90,9 +90,26 @@ export default {
       }
       this.register(data)
           .then((response) => {
-            console.log(response.data.body)
-            this.setLoggedIn(true)
-            this.$router.push("/")
+            const params = new URLSearchParams();
+            params.append("username", this.email);
+            params.append("password", this.password);
+            this.login(params)
+                .then((result) => {
+                  console.log(result)
+                  this.setLoggedIn(true)
+                  this.$router.push("/")
+                })
+                .catch((error) => {
+                  if (error.response.data === null) {
+                    this.alertText = error.response.data
+                  } else {
+                    this.alertText = error
+                  }
+                  this.showAlert = true
+                })
+                .finally(() => {
+                  this.isLoading = false
+                })
           })
           .catch((error) => {
             console.log(error)
@@ -107,7 +124,7 @@ export default {
             this.isLoading = false
           })
     },
-    ...mapActions(['register']),
+    ...mapActions(['register', 'login']),
     ...mapMutations(['setLoggedIn']),
   },
   data() {

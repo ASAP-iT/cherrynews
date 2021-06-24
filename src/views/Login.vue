@@ -65,8 +65,11 @@ export default {
           this.$router.push("/")
         })
         .catch((error) => {
-          console.log(error)
-          this.alertText = error.response.data
+          if (error.response.data === null) {
+            this.alertText = error.response.data
+          } else {
+            this.alertText = error
+          }
           this.showAlert = true
         })
         .finally(() => {
