@@ -1,11 +1,11 @@
 <template>
   <MDBCard class="col-lg-3 mx-2 my-2">
     <MDBCardBody>
-      <MDBCardTitle>Название статьи</MDBCardTitle>
+      <MDBCardTitle>{{ title }}</MDBCardTitle>
       <MDBCardText>
-        Каткое буквально в пару строк чтобы можно было понять что ты будешь читать далее
+        {{ desc }}
       </MDBCardText>
-      <MDBBtn outline="primary" @click="$router.push('/post/123/')">Читать статью</MDBBtn>
+      <MDBBtn outline="primary" @click="$router.push('/post/' + id.toString())">Читать статью</MDBBtn>
     </MDBCardBody>
   </MDBCard>
 </template>
@@ -15,6 +15,20 @@ import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBSpin
 
 export default {
   name: 'PostPreview',
+  props: {
+    id: {
+      type: Number,
+      default: 0
+    },
+    title: {
+      type: String,
+      default: "UNKNOWN TITLE"
+    },
+    desc: {
+      type: String,
+      default: "UNKNOWN DESCRIPTION"
+    },
+  },
   components: {
     MDBBtn,
     MDBSpinner,

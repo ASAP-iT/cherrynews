@@ -6,22 +6,9 @@
       сайта и могут содержать неприемлимый контент
     </p>
     <div class="row justify-content-center" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
+      <template v-for="(post, i) in this.posts" :key="i">
+        <PostPreview :id="post.id" :title="post.title" :desc="post.content"></PostPreview>
+      </template>
     </div>
   </div>
 </template>
@@ -32,6 +19,7 @@ import {
   MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem
 } from "mdb-vue-ui-kit";
 import PostPreview from "./PostPreview.vue";
+import {mapActions} from "vuex";
 
 export default {
   name: 'Home',
@@ -46,10 +34,18 @@ export default {
     register() {
       this.isLoading = true
     },
+    ...mapActions(['getPosts'])
+  },
+  mounted() {
+    this.getPosts()
+      .then((response) => {
+        this.posts = response.data
+      })
   },
   data() {
     return {
-      isLoading: false
+      isLoading: false,
+      posts: [],
     }
   }
 }
