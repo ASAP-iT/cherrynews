@@ -32,7 +32,7 @@ import {
 import marked from "marked"
 import lodash from "lodash"
 import PostCard from "@/views/PostCard";
-import { mapActions } from 'vuex';
+import {mapActions, mapGetters} from 'vuex';
 
 export default {
   name: "CreatePost",
@@ -76,6 +76,7 @@ export default {
   },
   methods: {
     ...mapActions(['createPost']),
+    ...mapGetters(['user']),
     update: _.debounce(function(e) {
       this.input = e.target.value;
     }, 50),
@@ -87,7 +88,7 @@ export default {
         title: "string",
         content: "string",
         publish_date: "2021-06-24T20:02:53.948Z",
-        publisher_id: 0
+        publisher_id: this.user.id
       }
 
       this.createPost(payload)
