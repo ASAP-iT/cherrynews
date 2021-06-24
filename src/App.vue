@@ -1,6 +1,6 @@
 <template>
   <MDBNavbar expand="lg" light bg="light" container>
-    <MDBNavbarBrand href="#">Brand</MDBNavbarBrand>
+    <MDBNavbarBrand href="#">ASAP-iT</MDBNavbarBrand>
     <MDBNavbarToggler
         @click="collapse1 = !collapse1"
         target="#navbarSupportedContent"
