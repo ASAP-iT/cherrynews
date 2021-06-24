@@ -60,7 +60,6 @@ export default {
       params.append("password", this.password);
       this.login(params)
         .then((result) => {
-          console.log(result)
           this.setLoggedIn(true)
           this.$router.push("/")
         })
