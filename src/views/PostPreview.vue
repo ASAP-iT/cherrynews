@@ -3,9 +3,9 @@
     <MDBCardBody>
       <MDBCardTitle>Название статьи</MDBCardTitle>
       <MDBCardText>
-        Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
+        Каткое буквально в пару строк чтобы можно было понять что ты будешь читать далее
       </MDBCardText>
-      <MDBBtn outline="primary" @click="$router.push('/post/123/')">Читать далее</MDBBtn>
+      <MDBBtn outline="primary" @click="$router.push('/post/123/')">Читать статью</MDBBtn>
     </MDBCardBody>
   </MDBCard>
 </template>

@@ -1,11 +1,11 @@
 <template>
-  <div id="editor" class="row">
-    <MDBCard id="text-editor" class="col-md-4">
+  <div id="editor" class="row d-md-grid justify-content-center">
+    <MDBCard id="text-editor" class="col-lg-4">
       <MDBCardBody style="max-width: 1000px;">
         <textarea rows="20" :value="input" @input="update"></textarea>
       </MDBCardBody>
     </MDBCard>
-    <PostCard id="preview" style="display: inline" :tags="tags" class="col-md-4" :html="compiledMarkdown"></PostCard>
+    <PostCard id="preview" style="display: inline" :tags="tags" :html="compiledMarkdown"></PostCard>
   </div>
 </template>
 

@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="form-outline form-item">
-            <input v-model="nickname" class="form-control active">
+            <input v-model="email" type="Email" class="form-control active">
             <label class="form-label">Имя Пользователя</label>
             <div class="form-notch">
               <div class="form-notch-leading" style="width: 9px"></div>
@@ -38,16 +38,7 @@
               <div class="form-notch-trailing"></div>
             </div>
           </div>
-          <div class="form-outline form-item">
-            <input v-model="password" class="form-control active">
-            <label class="form-label">Имя Пользователя</label>
-            <div class="form-notch">
-              <div class="form-notch-leading" style="width: 9px"></div>
-              <div class="form-notch-middle" style="width: 120px"></div>
-              <div class="form-notch-trailing"></div>
-            </div>
-          </div>
-          <MDBBtn color="primary" size="lg" class="save" @click="saveUser()">Сохранить</MDBBtn>
+          <MDBBtn color="primary" size="lg" class="save" @click="saveUser()">Сохранить данные</MDBBtn>
         </MDBCard>
       </div>
     </div>
