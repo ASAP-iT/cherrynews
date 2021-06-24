@@ -76,7 +76,7 @@ export default {
   },
   mounted() {
     // Check user token....
-    this.setLoggedIn(false)
+    this.setLoggedIn(true)
   },
   data() {
     return {

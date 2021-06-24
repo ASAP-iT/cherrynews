@@ -3,32 +3,7 @@
     <h1>Название статьи</h1>
 
     <div class="wrapper">
-      <div style="padding-top: 32px;max-width: 1000px;margin: 0 auto">
-        <MDBCard class="mb-3 custom" style="max-width: 1000px; display: table; margin: 10px auto;">
-          <MDBCardBody>
-            <h5 style="text-align: left; color: gray">Автор</h5>
-
-            <p id="content" style="text-align: justify;margin-top: 32px;margin-bottom: 32px">
-
-            </p>
-
-            <div style="width: 100%;text-align: right">
-              <div style="margin-right: 16px;display: inline">
-                <div class="tag">#asdfasdfasd</div>
-                <div class="tag">#asdfasdfasd</div>
-                <div class="tag">#asdfasdfasd</div>
-                <div class="tag">#asdfasdfasd</div>
-                <div class="tag">#asdfasdfasd</div>
-                <div class="tag">#asdfasdfasd</div>
-              </div>
-              <h6 style="color: gray; display: inline">
-                Дата
-              </h6>
-            </div>
-          </MDBCardBody>
-        </MDBCard>
-      </div>
-
+      <PostCard></PostCard>
       <h1 style="margin-top: 30px">Похожие статьи:</h1>
 
       <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
@@ -72,10 +47,12 @@ import marked from 'marked';
 import { mapActions } from 'vuex';
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem,
   MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
+import PostCard from "@/views/PostCard.vue";
 
 export default {
   name: 'App',
   components: {
+    PostCard,
     MDBBtn,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
@@ -108,19 +85,7 @@ export default {
 </script>
 
 <style>
-.tag {
-  display: inline;
-  padding: 8px;
-  background-color: lightgray;
-  border-radius: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.tag:hover {
-  background-color: lightblue;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+p {
+  margin-bottom: 4px;
 }
 </style>
