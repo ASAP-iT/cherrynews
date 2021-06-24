@@ -33,6 +33,7 @@ import marked from "marked"
 import lodash from "lodash"
 import PostCard from "@/views/PostCard";
 import {mapActions, mapGetters} from 'vuex';
+import {useContext} from "vue";
 
 export default {
   name: "CreatePost",
@@ -83,13 +84,15 @@ export default {
 
     createPostTap() {
       this.isLoading = true
-
+      
       const payload = {
         title: this.input.split("\n")[0],
         content: this.input,
         publish_date: "2021-06-24T20:02:53.948Z",
-        publisher_id: this.user.id
+        publisher_id: this.user().id
       }
+
+      console.log(payload)
 
       this.createPost(payload)
       .then((response) => {

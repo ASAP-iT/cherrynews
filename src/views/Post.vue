@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div v-if="html !== null" class="main">
     <h1>Название статьи</h1>
 
     <div class="wrapper">
