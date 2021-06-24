@@ -66,8 +66,8 @@ export default {
     }
     console.log(this.$route.params.id)
     this.getArticle(this.$route.params.id)
-    .then((content) => {
-      let lines = content.split("\n");
+    .then((response) => {
+      let lines = response.data.content.split("\n");
       let start = '<div>'
       lines.forEach(line => {
         start += marked(line);
