@@ -14,12 +14,14 @@ export default createStore({
     setToken(state, token) {
       state.accessToken = token;
     },
-
     setLoggedIn(state, isLoggedIn) {
       state.isLoggedIn = isLoggedIn;
     },
   },
   actions: {
+    checkCookie(_) {
+      return axios.get("checkCookie")
+    },
     register(_, payload) {
       return axios.post("register", payload)
     },

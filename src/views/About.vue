@@ -38,7 +38,12 @@
               <div class="form-notch-trailing"></div>
             </div>
           </div>
-          <MDBBtn color="primary" size="lg" class="save" @click="saveUser()">Сохранить данные</MDBBtn>
+          <div>
+            <MDBBtn color="primary" size="lg" class="save" @click="saveUser()">Сохранить данные</MDBBtn>
+          </div>
+          <div>
+            <MDBBtn color="danger" size="lg" class="save" @click="logout()">Выйти из аккаунта</MDBBtn>
+          </div>
         </MDBCard>
       </div>
     </div>
@@ -46,7 +51,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 
 export default {
@@ -59,6 +64,10 @@ export default {
     MDCol,
   },
   methods: {
+    logout() {
+      this.setLoggedIn(false);
+      this.$router.push("/")
+    },
     saveUser() {
 
     },
@@ -78,6 +87,7 @@ export default {
       //   })
     },
     ...mapActions(['save']),
+    ...mapMutations(['setLoggedIn'])
   },
   data() {
     return {
