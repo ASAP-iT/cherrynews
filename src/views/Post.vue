@@ -55,9 +55,9 @@ export default {
     this.getPosts()
         .then((response) => {
           let items = response.data
-          if (Math.random() <= 1 / 2) {
-            this.posts.push(items[Math.floor(Math.random()*items.length)])
-          }
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
         })
   },
   methods: {
