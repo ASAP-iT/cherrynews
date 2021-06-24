@@ -6,246 +6,49 @@
       сайта и могут содержать неприемлимый контент
     </p>
     <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary" @click.native="$router.push('/post')">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <div class="w-100"></div>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
       <div class="w-100"></div>
 
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-
-
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в паasdf sadf asd asd fads f asdds asd f as f ds f asf  asd fsad fs d f
-            f asdf asdf asd asdf ру строк чтобы можно было понять
-            что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <div class="w-100"></div>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
       <div class="w-100"></div>
 
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <div class="w-100"></div>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
       <div class="w-100"></div>
 
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
       <div class="w-100"></div>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
+      <PostPreview></PostPreview>
       <div class="w-100"></div>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <div class="w-100"></div>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <div class="w-100"></div>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <div class="w-100"></div>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
-
-      <MDBCard class="col cell">
-        <MDBCardBody>
-          <MDBCardTitle>Название статьи</MDBCardTitle>
-          <MDBCardText>
-            Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-          </MDBCardText>
-          <MDBBtn outline="primary">Читать далее</MDBBtn>
-        </MDBCardBody>
-      </MDBCard>
     </div>
   </div>
 </template>
@@ -255,10 +58,12 @@ import {
   MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn,
   MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem
 } from "mdb-vue-ui-kit";
+import PostPreview from "./PostPreview.vue";
 
 export default {
   name: 'Home',
   components: {
+    PostPreview,
     MDBBtn,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,

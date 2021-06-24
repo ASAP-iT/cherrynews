@@ -7,11 +7,16 @@ axios.defaults.withCredentials = true
 
 export default createStore({
   state: {
-      accessToken: null
+    accessToken: null,
+    isLoggedIn: false,
   },
   mutations: {
     setToken(state, token) {
       state.accessToken = token;
+    },
+
+    setLoggedIn(state, isLoggedIn) {
+      state.isLoggedIn = isLoggedIn;
     },
   },
   actions: {
@@ -39,6 +44,9 @@ efficitur ut nibh a, sagittis imperdiet mi. Sed pulvinar dolor eros, id dapibus 
 ~Suspendisse potenti.~ Fusce blandit mauris lorem, sed rutrum dui pellentesque a. Phasellus quis ipsum quis ligula imperdiet commodo. Nulla lorem velit, molestie eu elementum egestas, dapibus scelerisque urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam vitae felis nibh. Integer sed ultrices metus, at semper purus. Nullam commodo rhoncus aliquet.`
       return sampleText
     }
+  },
+  getters: {
+    isLoggedIn: state => state.isLoggedIn,
   },
   modules: {
   },

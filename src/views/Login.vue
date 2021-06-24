@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 
 export default {
@@ -61,6 +61,8 @@ export default {
       this.login(params)
         .then((result) => {
           console.log(result)
+          this.setLoggedIn(true)
+          this.$router.push("/")
         })
         .catch((error) => {
           console.log(error)
@@ -71,7 +73,8 @@ export default {
           this.isLoading = false
         })
     },
-    ...mapActions(['login'])
+    ...mapActions(['login']),
+    ...mapMutations(['setLoggedIn']),
   },
   data() {
     return {

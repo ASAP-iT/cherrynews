@@ -10,20 +10,20 @@
         <MDBNavbarItem class="nav-item" to="">
           <router-link to="/">Home</router-link>
         </MDBNavbarItem>
-        <MDBNavbarItem class="nav-item" to="">
+        <MDBNavbarItem v-if="this.isLoggedIn" class="nav-item" to="">
           <router-link to="/about">Account</router-link>
         </MDBNavbarItem>
         <MDBNavbarItem class="nav-item" to="">
           <router-link to="/post">Post</router-link>
         </MDBNavbarItem>
-        <MDBNavbarItem class="nav-item" to="">
-          <router-link to="/login">Login</router-link>
-        </MDBNavbarItem>
-        <MDBNavbarItem class="nav-item" to="">
-          <router-link to="/register">Register</router-link>
-        </MDBNavbarItem>
-        <MDBNavbarItem class="nav-item" to="">
+        <MDBNavbarItem v-if="this.isLoggedIn" class="nav-item" to="">
           <router-link to="/create-post">Create</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem v-if="!this.isLoggedIn" class="nav-item" to="">
+          <router-link to="/login"><b>Login</b></router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem v-if="!this.isLoggedIn" class="nav-item" to="">
+          <router-link to="/register"><b>Register</b></router-link>
         </MDBNavbarItem>
       </MDBNavbarNav>
     </MDBCollapse>
@@ -56,6 +56,8 @@ import {
 } from "mdb-vue-ui-kit";
 import { ref } from 'vue';
 
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
   name: 'App',
   components: {
@@ -70,6 +72,14 @@ export default {
     MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
   },
   methods: {
+    ...mapMutations(['setLoggedIn'])
+  },
+  computed: {
+    ...mapGetters(['isLoggedIn'])
+  },
+  mounted() {
+    // Check user token....
+    this.setLoggedIn(false)
   },
   data() {
     return {
