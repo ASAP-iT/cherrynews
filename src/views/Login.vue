@@ -60,6 +60,7 @@ export default {
       params.append("password", this.password);
       this.login(params)
         .then((result) => {
+          this.setID(result.data.id)
           this.setLoggedIn(true)
           this.$router.push("/")
         })
@@ -76,7 +77,7 @@ export default {
         })
     },
     ...mapActions(['login']),
-    ...mapMutations(['setLoggedIn']),
+    ...mapMutations(['setLoggedIn', 'setID']),
   },
   data() {
     return {

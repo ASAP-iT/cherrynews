@@ -95,7 +95,7 @@ export default {
             params.append("password", this.password);
             this.login(params)
                 .then((result) => {
-                  console.log(result)
+                  this.setID(result.data.id)
                   this.setLoggedIn(true)
                   this.$router.push("/")
                 })

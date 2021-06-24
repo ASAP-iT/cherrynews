@@ -1,4 +1,13 @@
 <template>
+  <p v-if="showAlert" class="alert alert-dismissible fade show alert-danger">
+    <strong>Внимание:</strong>
+    {{ alertText }}
+    <button @click="() => { this.showAlert = false }" type="button" class="btn-close" data-mdb-dismiss="alert"></button>
+  </p>
+  <MDBBtn :disabled="isLoading" color="primary" size="lg" class="save" @click="createPostTap()">
+    <MDBSpinner tag="span" size="sm" v-if="isLoading"/>
+    Опубликовать
+  </MDBBtn>
   <div id="editor" class="row d-md-grid justify-content-center">
     <MDBCard id="text-editor" class="col-lg-4" style="width: 600px">
       <MDBCardBody style="max-width: 1000px;">
@@ -23,6 +32,7 @@ import {
 import marked from "marked"
 import lodash from "lodash"
 import PostCard from "@/views/PostCard";
+import { mapActions } from 'vuex';
 
 export default {
   name: "CreatePost",
@@ -37,7 +47,10 @@ export default {
   data() {
     return {
       input: '# hello',
-      tags: []
+      tags: [],
+      isLoading: false,
+      alertText: "",
+      showAlert: false,
     }
   },
   computed: {
@@ -62,9 +75,37 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['createPost']),
     update: _.debounce(function(e) {
       this.input = e.target.value;
-    }, 50)
+    }, 50),
+
+    createPostTap() {
+      this.isLoading = true
+
+      const payload = {
+        title: "string",
+        content: "string",
+        publish_date: "2021-06-24T20:02:53.948Z",
+        publisher_id: 0
+      }
+
+      this.createPost(payload)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        if (error.response.data === null) {
+          this.alertText = error.response.data
+        } else {
+          this.alertText = error
+        }
+        this.showAlert = true
+      })
+      .finally(() => {
+        this.isLoading = false
+      })
+    }
   }
 
 }

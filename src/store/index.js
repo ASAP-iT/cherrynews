@@ -20,8 +20,14 @@ export default createStore({
     setLoggedIn(state, isLoggedIn) {
       state.isLoggedIn = isLoggedIn;
     },
+    setID(state, id) {
+      state.userData.id = id
+    }
   },
   actions: {
+    createPost(_, payload) {
+      return axios.post("post/create", payload)
+    },
     checkCookie(_) {
       return axios.get("checkCookie")
     },
