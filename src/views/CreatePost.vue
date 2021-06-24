@@ -1,11 +1,11 @@
 <template>
-  <div id="editor" class="row justify-content-center">
-    <MDBCard class="mb-3 col-md-2 mx-2" style="width: 1000px; max-width: 90%; display: table; margin: 50px auto;">
-      <MDBCardBody>
+  <div id="editor" class="row">
+    <MDBCard id="text-editor" class="col-md-4">
+      <MDBCardBody style="max-width: 1000px;">
         <textarea rows="20" :value="input" @input="update"></textarea>
       </MDBCardBody>
     </MDBCard>
-    <PostCard :tags="tags" class="col-md-2 mx-2 my-2" style="max-width: 50vw" :html="compiledMarkdown"></PostCard>
+    <PostCard id="preview" style="display: inline" :tags="tags" class="col-md-4" :html="compiledMarkdown"></PostCard>
   </div>
 </template>
 
@@ -47,8 +47,11 @@ export default {
       lines.forEach((line, i) => {
         if (i === lines.length - 1) {
           if (line.startsWith("[") && line.endsWith("]")) {
-            let content = line.slice(1, line.length - 2)
+            let content = line.slice(1, line.length - 1)
             this.tags = content.split(" ")
+          } else {
+            this.tags = []
+            start += marked(line, {sanitize: true});
           }
         } else {
           start += marked(line, {sanitize: true});
@@ -83,7 +86,11 @@ textarea,
   height: 100%;
   vertical-align: top;
   box-sizing: border-box;
-  padding: 0 20px;
+  /*padding: 0 20px;*/
+}
+
+#editor {
+  padding: 0;
 }
 
 textarea {
@@ -99,5 +106,18 @@ textarea {
 
 code {
   color: #f66;
+}
+
+#text-editor {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+
+#preview {
+  max-width: 1000px;
+/*  margin-top: 32px;*/
+/*  margin-right: 32px;*/
 }
 </style>

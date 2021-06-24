@@ -3,7 +3,7 @@
     <h1>Название статьи</h1>
 
     <div class="wrapper">
-      <PostCard></PostCard>
+      <PostCard :html="html"></PostCard>
       <h1 style="margin-top: 30px">Похожие статьи:</h1>
 
       <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
@@ -68,18 +68,21 @@ export default {
     this.getArticle(this.$route.params.id)
     .then((content) => {
       let lines = content.split("\n");
-      let element = document.getElementById('content');
+      let start = '<div>'
       lines.forEach(line => {
-        console.log(line)
-        element.innerHTML += marked(line);
+        start += marked(line);
       })
+      start += '</div>'
+      this.html = start
     })
   },
   methods: {
     ...mapActions(['getArticle'])
   },
   data() {
-    return {}
+    return {
+      html: null
+    }
   }
 }
 </script>
