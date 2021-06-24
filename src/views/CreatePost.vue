@@ -1,6 +1,6 @@
 <template>
   <div id="editor" class="row d-md-grid justify-content-center">
-    <MDBCard id="text-editor" class="col-lg-4">
+    <MDBCard id="text-editor" class="col-lg-4" style="width: 600px">
       <MDBCardBody style="max-width: 1000px;">
         <textarea rows="20" :value="input" @input="update"></textarea>
       </MDBCardBody>
