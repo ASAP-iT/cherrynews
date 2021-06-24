@@ -85,8 +85,8 @@ export default {
       this.isLoading = true
 
       const payload = {
-        title: "string",
-        content: "string",
+        title: this.input.split("\n")[0],
+        content: this.input,
         publish_date: "2021-06-24T20:02:53.948Z",
         publisher_id: this.user.id
       }
