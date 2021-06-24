@@ -51,10 +51,10 @@ export default {
             this.tags = content.split(" ")
           } else {
             this.tags = []
-            start += marked(line, {sanitize: true});
+            start += marked(line);
           }
         } else {
-          start += marked(line, {sanitize: true});
+          start += marked(line);
         }
       })
       start += '</div>'

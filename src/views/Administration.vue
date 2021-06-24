@@ -7,55 +7,18 @@
           <thead>
           <tr>
             <th scope="col">№</th>
-            <th scope="col">User</th>
-            <th scope="col">Status</th>
+            <th scope="col">Usermame</th>
+            <th scope="col">Email</th>
             <th scope="col">Permissions</th>
-            <th scope="col">Dolor</th>
+            <th scope="col">Actions</th>
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Макс</td>
-            <td>Гей без мака</td>
-            <td>Moder</td>
-            <td>
-              <button type="button" class="btn btn-danger btn-sm px-3">
-                Ban User
-              </button>
-              <button type="button" class="btn btn-warning btn-sm px-3">
-                Make Mod
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Рома Омега</td>
-            <td>Главный гей с маком </td>
-            <td>User</td>
-            <td>
-              <button type="button" class="btn btn-danger btn-sm px-3">
-                Ban User
-              </button>
-              <button type="button" class="btn btn-warning btn-sm px-3">
-                Make Mod
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Дени</td>
-            <td>Гей с маком</td>
-            <td>User</td>
-            <td>
-              <button type="button" class="btn btn-danger btn-sm px-3">
-                Ban User
-              </button>
-              <button type="button" class="btn btn-warning btn-sm px-3">
-                Make Mod
-              </button>
-            </td>
-          </tr>
+            <template v-for="(user, i) in this.users" :key="i">
+              <UserRow :i="i + 1" :name="user.name" :email="user.email" :type="user.type" :user-type="user.userType"
+                :ban-action="() => { this.banUser(i) }" :isLoadingBan="isProcessingBan && selectedBan === i"
+              ></UserRow>
+            </template>
           </tbody>
         </table>
       </MDBCardBody>
@@ -65,15 +28,66 @@
 
 <script>
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
+import UserRow from "../components/UserRow.vue";
+import { mapActions } from 'vuex';
 
 export default {
   name: 'Administration',
   components: {
+    UserRow,
     MDBBtn,
     MDBSpinner,
     MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem,
     MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,
     MDCol,
+  },
+  methods: {
+    ...mapActions(['ban', 'unban', 'getUsers']),
+    banUser(i) {
+      this.selectedBan = i
+      this.isProcessingBan = true
+      let user = this.users[i]
+      if (user.userType === 0) {
+        this.unban(user.id)
+          .then((response) => {
+            console.log(response)
+          })
+          .catch((error) => {
+            console.log(123)
+            console.log(error)
+          })
+        .finally(() => {
+          this.selectedBan = -1
+          this.isProcessingBan = false
+        })
+      } else if (user.userType === 1) {
+        this.ban(user.id)
+          .then((response) => {
+            console.log(response)
+          })
+          .catch((error) => {
+            console.log(321)
+            console.log(error)
+          })
+        .finally(() => {
+          this.selectedBan = -1
+          this.isProcessingBan = false
+        })
+      }
+    }
+  },
+  mounted() {
+    this.getUsers()
+      .then((users) => {
+        this.users = users
+      })
+  },
+  data() {
+    return {
+      users: [],
+      isProcessingBan: false,
+      selectedBan: -1,
+    }
   }
 }
 </script>

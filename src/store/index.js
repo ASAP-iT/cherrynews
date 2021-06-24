@@ -43,6 +43,51 @@ consectetur adipiscing elit. Curabitur nec rhoncus sapien. Praesent posuere frin
 efficitur ut nibh a, sagittis imperdiet mi. Sed pulvinar dolor eros, id dapibus nibh ultrices non. Vivamus eu venenatis ipsum. Vestibulum ligula est, feugiat sit amet erat quis, pretium molestie turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque tempor felis non orci tempor feugiat. Quisque in ex dapibus, finibus augue et, egestas diam. Aenean facilisis blandit justo, vel consectetur felis dapibus dignissim. Suspendisse neque eros, volutpat id arcu eu, tempus facilisis enim. In mollis placerat lectus, et congue urna placerat et. Proin ac nisl a massa ornare tristique. Proin rhoncus tortor sit amet congue semper. Cras dignissim dui sit amet ipsum tempor, sed volutpat neque gravida.
 ~Suspendisse potenti.~ Fusce blandit mauris lorem, sed rutrum dui pellentesque a. Phasellus quis ipsum quis ligula imperdiet commodo. Nulla lorem velit, molestie eu elementum egestas, dapibus scelerisque urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam vitae felis nibh. Integer sed ultrices metus, at semper purus. Nullam commodo rhoncus aliquet.`
       return sampleText
+    },
+    ban(_, userID) {
+      return axios.post("admin/ban-user?user_id=" + userID.toString())
+    },
+    unban(_, userID) {
+      return axios.post("admin/unban-user?user_id=" + userID.toString())
+    },
+    getUsers(_) {
+      return [
+        {
+          id: 1,
+          name: "Pidor",
+          email: "Pidor123@gmail.com",
+          type: "Pidoras",
+          userType: 1
+        },
+        {
+          id: 1,
+          name: "Pidor",
+          email: "Pidor123@gmail.com",
+          type: "Pidoras",
+          userType: 1
+        },
+        {
+          id: 1,
+          name: "Pidor",
+          email: "Pidor123@gmail.com",
+          type: "Pidoras",
+          userType: 1
+        },
+        {
+          id: 1,
+          name: "Pidor",
+          email: "Pidor123@gmail.com",
+          type: "Pidoras",
+          userType: 1
+        },
+        {
+          id: 1,
+          name: "Pidor",
+          email: "Pidor123@gmail.com",
+          type: "Pidoras",
+          userType: 1
+        }
+      ]
     }
   },
   getters: {
