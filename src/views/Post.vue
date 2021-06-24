@@ -1,6 +1,6 @@
 <template>
   <div v-if="html !== null" class="main">
-    <h1>Название статьи</h1>
+    <h1>{{ post.title }}</h1>
 
     <div class="wrapper">
       <PostCard :html="html"></PostCard>
@@ -42,6 +42,7 @@ export default {
     console.log(this.$route.params.id)
     this.getArticle(this.$route.params.id)
     .then((response) => {
+      this.post = response.data;
       let lines = response.data.content.split("\n");
       let start = '<div>'
       lines.forEach(line => {
@@ -65,7 +66,8 @@ export default {
   data() {
     return {
       html: null,
-      posts: []
+      posts: [],
+      post: null
     }
   }
 }
