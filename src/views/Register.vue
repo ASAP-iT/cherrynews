@@ -2,7 +2,7 @@
   <div class="main">
     <h1>Регистрация</h1>
     <div class="wrapper">
-      <div class="row grid" @keydown.enter="userRegister()" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0">
+      <div class="row grid" @keydown.enter.exact="userRegister()" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0">
         <MDBCard class="profile-card" style="display: table; margin: 0 auto;">
           <transition name="bounce">
             <p v-if="showAlert" class="alert alert-dismissible fade show alert-danger">
