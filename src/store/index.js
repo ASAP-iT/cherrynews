@@ -10,7 +10,8 @@ export default createStore({
     accessToken: null,
     isLoggedIn: false,
     userData: {
-      id: null
+      id: null,
+      userType: 1,
     }
   },
   mutations: {
@@ -97,6 +98,7 @@ efficitur ut nibh a, sagittis imperdiet mi. Sed pulvinar dolor eros, id dapibus 
   },
   getters: {
     isLoggedIn: state => state.isLoggedIn,
+    user: state => state.userData,
   },
   modules: {
   },
