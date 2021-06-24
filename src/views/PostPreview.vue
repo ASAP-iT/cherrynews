@@ -1,11 +1,11 @@
 <template>
-  <MDBCard class="col cell">
+  <MDBCard class="col-lg-3 mx-2 my-2">
     <MDBCardBody>
       <MDBCardTitle>Название статьи</MDBCardTitle>
       <MDBCardText>
         Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
       </MDBCardText>
-      <MDBBtn outline="primary" @click="$router.push('/post')">Читать далее</MDBBtn>
+      <MDBBtn outline="primary" @click="$router.push('/post/123/')">Читать далее</MDBBtn>
     </MDBCardBody>
   </MDBCard>
 </template>

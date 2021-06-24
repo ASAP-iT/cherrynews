@@ -5,7 +5,6 @@
     <div class="wrapper">
       <div style="padding-top: 32px;max-width: 1000px;margin: 0 auto">
         <MDBCard class="mb-3 custom" style="max-width: 1000px; display: table; margin: 10px auto;">
-          <MDBCardImg top src="https://mdbootstrap.com/img/new/slides/041.jpg" alt="..."/>
           <MDBCardBody>
             <h5 style="text-align: left; color: gray">Автор</h5>
 
@@ -84,7 +83,12 @@ export default {
     MDCol,
   },
   mounted() {
-    this.getArticle(1)
+    if (this.$route.params.id == null) {
+      this.$router.push("/")
+      return
+    }
+    console.log(this.$route.params.id)
+    this.getArticle(this.$route.params.id)
     .then((content) => {
       let lines = content.split("\n");
       let element = document.getElementById('content');

@@ -5,50 +5,23 @@
       <strong>Внимание:</strong> Статьи в этом разделе не проходят модерацию. Они были опубликованы другими пользователями нашего
       сайта и могут содержать неприемлимый контент
     </p>
-    <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <div class="w-100"></div>
+    <div class="row justify-content-center" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
-      <div class="w-100"></div>
-
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <div class="w-100"></div>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
-      <div class="w-100"></div>
-
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <div class="w-100"></div>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
       <PostPreview></PostPreview>
-      <div class="w-100"></div>
-
       <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <div class="w-100"></div>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <PostPreview></PostPreview>
-      <div class="w-100"></div>
     </div>
   </div>
 </template>

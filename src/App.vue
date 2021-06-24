@@ -13,9 +13,6 @@
         <MDBNavbarItem v-if="this.isLoggedIn" class="nav-item" to="">
           <router-link to="/about">Account</router-link>
         </MDBNavbarItem>
-        <MDBNavbarItem class="nav-item" to="">
-          <router-link to="/post">Post</router-link>
-        </MDBNavbarItem>
         <MDBNavbarItem v-if="this.isLoggedIn" class="nav-item" to="">
           <router-link to="/create-post">Create</router-link>
         </MDBNavbarItem>
