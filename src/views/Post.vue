@@ -4,7 +4,7 @@
 
     <div class="wrapper">
       <PostCard :html="html"></PostCard>
-      <h1 style="margin-top: 30px">Похожие статьи:</h1>
+      <h1 style="margin-top: 30px">Другие статьи:</h1>
 
       <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
         <MDBCard class="col cell">
