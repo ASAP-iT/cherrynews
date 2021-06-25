@@ -1,42 +1,15 @@
 <template>
-  <div class="main">
-    <h1>Название статьи</h1>
+  <div v-if="html !== null" class="main">
+    <h1>{{ post.title }}</h1>
 
     <div class="wrapper">
       <PostCard :html="html"></PostCard>
       <h1 style="margin-top: 30px">Другие статьи:</h1>
 
-      <div class="row grid" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
-        <MDBCard class="col cell">
-          <MDBCardBody>
-            <MDBCardTitle>Название статьи</MDBCardTitle>
-            <MDBCardText>
-              Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-            </MDBCardText>
-            <MDBBtn outline="primary">Читать далее</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
-
-        <MDBCard class="col cell">
-          <MDBCardBody>
-            <MDBCardTitle>Название статьи</MDBCardTitle>
-            <MDBCardText>
-              Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-            </MDBCardText>
-            <MDBBtn outline="primary">Читать далее</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
-
-        <MDBCard class="col cell">
-          <MDBCardBody>
-            <MDBCardTitle>Название статьи</MDBCardTitle>
-            <MDBCardText>
-              Каткое описание статьи буквально в пару строк чтобы можно было понять что ты будешь читать далее
-            </MDBCardText>
-            <MDBBtn outline="primary">Читать далее</MDBBtn>
-          </MDBCardBody>
-        </MDBCard>
-        <div class="w-100"></div>
+      <div class="row justify-content-center" style="padding-top: 32px;width: 100%;margin-left: 0;margin-right: 0;">
+        <template v-for="(post, i) in this.posts" :key="i">
+          <PostPreview :id="post.id" :title="post.title" :desc="post.content"></PostPreview>
+        </template>
       </div>
     </div>
   </div>
@@ -48,10 +21,12 @@ import { mapActions } from 'vuex';
 import { MDCol, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem,
   MDBSpinner, MDBNavbar, MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem } from "mdb-vue-ui-kit";
 import PostCard from "@/views/PostCard.vue";
+import PostPreview from "./PostPreview.vue";
 
 export default {
   name: 'App',
   components: {
+    PostPreview,
     PostCard,
     MDBBtn,
     MDBSpinner,
@@ -66,8 +41,9 @@ export default {
     }
     console.log(this.$route.params.id)
     this.getArticle(this.$route.params.id)
-    .then((content) => {
-      let lines = content.split("\n");
+    .then((response) => {
+      this.post = response.data;
+      let lines = response.data.content.split("\n");
       let start = '<div>'
       lines.forEach(line => {
         start += marked(line);
@@ -75,13 +51,23 @@ export default {
       start += '</div>'
       this.html = start
     })
+
+    this.getPosts()
+        .then((response) => {
+          let items = response.data
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
+          this.posts.push(items[Math.floor(Math.random()*items.length)])
+        })
   },
   methods: {
-    ...mapActions(['getArticle'])
+    ...mapActions(['getArticle', 'getPosts'])
   },
   data() {
     return {
-      html: null
+      html: null,
+      posts: [],
+      post: null
     }
   }
 }

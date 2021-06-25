@@ -1,4 +1,13 @@
 <template>
+  <p v-if="showAlert" class="alert alert-dismissible fade show alert-danger">
+    <strong>Внимание:</strong>
+    {{ alertText }}
+    <button @click="() => { this.showAlert = false }" type="button" class="btn-close" data-mdb-dismiss="alert"></button>
+  </p>
+  <MDBBtn :disabled="isLoading" color="primary" size="lg" class="save" @click="createPostTap()">
+    <MDBSpinner tag="span" size="sm" v-if="isLoading"/>
+    Опубликовать
+  </MDBBtn>
   <div id="editor" class="row d-md-grid justify-content-center">
     <MDBCard id="text-editor" class="col-lg-4" style="width: 600px">
       <MDBCardBody style="max-width: 1000px;">
@@ -23,6 +32,8 @@ import {
 import marked from "marked"
 import lodash from "lodash"
 import PostCard from "@/views/PostCard";
+import {mapActions, mapGetters} from 'vuex';
+import {useContext} from "vue";
 
 export default {
   name: "CreatePost",
@@ -37,7 +48,10 @@ export default {
   data() {
     return {
       input: '# hello',
-      tags: []
+      tags: [],
+      isLoading: false,
+      alertText: "",
+      showAlert: false,
     }
   },
   computed: {
@@ -62,9 +76,40 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['createPost']),
+    ...mapGetters(['user']),
     update: _.debounce(function(e) {
       this.input = e.target.value;
-    }, 50)
+    }, 50),
+
+    createPostTap() {
+      this.isLoading = true
+      
+      const payload = {
+        title: this.input.split("\n")[0],
+        content: this.input,
+        publish_date: "2021-06-24T20:02:53.948Z",
+        publisher_id: this.user().id
+      }
+
+      console.log(payload)
+
+      this.createPost(payload)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        if (error.response.data === null) {
+          this.alertText = error.response.data
+        } else {
+          this.alertText = error
+        }
+        this.showAlert = true
+      })
+      .finally(() => {
+        this.isLoading = false
+      })
+    }
   }
 
 }

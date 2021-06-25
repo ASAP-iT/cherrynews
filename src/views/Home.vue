@@ -39,6 +39,7 @@ export default {
   mounted() {
     this.getPosts()
       .then((response) => {
+        console.log(response)
         this.posts = response.data
       })
   },
